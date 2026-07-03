@@ -1,4 +1,5 @@
 from data_loader import load_data
+from analyzer import clean_data
 
 
 def main():
@@ -7,11 +8,11 @@ def main():
     books = load_data(file_path)
 
     if books is not None:
+
+        books = clean_data(books)
+
         print("\n========== FIRST 5 ROWS ==========")
         print(books.head())
-
-        print("\n========== LAST 5 ROWS ==========")
-        print(books.tail())
 
         print("\n========== DATASET SHAPE ==========")
         print(books.shape)
