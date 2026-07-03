@@ -1,8 +1,16 @@
 from data_loader import load_data
-from analyzer import clean_data
+
+from analyzer import (
+    clean_data,
+    basic_analysis,
+    top_authors,
+    genre_distribution,
+    yearly_books
+)
 
 
 def main():
+
     file_path = "data/amazon_bestsellers.csv"
 
     books = load_data(file_path)
@@ -11,20 +19,13 @@ def main():
 
         books = clean_data(books)
 
-        print("\n========== FIRST 5 ROWS ==========")
-        print(books.head())
+        basic_analysis(books)
 
-        print("\n========== DATASET SHAPE ==========")
-        print(books.shape)
+        top_authors(books)
 
-        print("\n========== COLUMN NAMES ==========")
-        print(books.columns)
+        genre_distribution(books)
 
-        print("\n========== DATA TYPES ==========")
-        print(books.dtypes)
-
-        print("\n========== SUMMARY STATISTICS ==========")
-        print(books.describe())
+        yearly_books(books)
 
 
 if __name__ == "__main__":
