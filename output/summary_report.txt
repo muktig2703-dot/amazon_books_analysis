@@ -1,0 +1,22 @@
+
+==============================
+ AMAZON BESTSELLER ANALYSIS
+==============================
+
+Total Books          : 550
+
+Unique Authors       : 248
+
+Average Rating       : 4.62
+
+Average Price        : $13.10
+
+Highest Rating       : 4.9
+
+Maximum Reviews      : 87841
+
+Most Popular Genre   : Non Fiction
+
+Top Author           : Jeff Kinney
+
+Report Generated Successfully.

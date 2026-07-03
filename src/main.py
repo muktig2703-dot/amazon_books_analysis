@@ -16,7 +16,11 @@ from visualization import (
     plot_reviews_vs_rating
 )
 
-
+from report_generator import (
+    export_cleaned_data,
+    export_analysis,
+    generate_summary_report
+)
 def main():
 
     file_path = "data/amazon_bestsellers.csv"
@@ -44,6 +48,14 @@ def main():
         plot_reviews_vs_rating(books)
 
         print("Charts saved successfully in the charts folder.")
+
+        print("\nExporting files...")
+
+        export_cleaned_data(books)
+        export_analysis(books)
+        generate_summary_report(books)
+
+        print("\n🎉 Project completed successfully!")
 
 
 if __name__ == "__main__":
